@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+<center>
+<h1>{{show_id.title}}</h1>
+<p>{{show_id.description}}</p>
+<img src="{{show_id.image.url}}" alt="" width="450" height="350">
+<iframe src="{{show_id.trailer}}" frameborder="0" width="450" height="350"></iframe>
+<p>{{show_id.quantity}}</p>
+<p>{{show_id.genre}}</p>
+<p>{{show_id.created_date}}</p>
+    <div>
+        <table border>
+            <tr>
+                <th>Имя</th> <th>Комментарий</th> <th>Оценка</th>
+            </tr>
+
+            {% for j in show_id.comment_object.all %}
+            <tr>
+                <td>{{j.name}}</td><td>{{j.text}}</td><td> &nbsp;&nbsp;&nbsp;{{j.rating}}</td>
+            </tr>
+
+            {% endfor %}
+
+
+        </table>
+    </div>
+
+
+
+
+
+<button><a href="/tvshow/{{show_id.id}}/delete">Удалить</a></button>
+<button><a href="/tvshow/{{show_id.id}}/update">Изменить</a></button>
+    </center>
+</body>
+</html>
