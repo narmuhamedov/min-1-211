@@ -10,7 +10,7 @@ class FilmListView(ListView):
 
     def get_queryset(self):
         return models.FilmParser.objects.all()
-
+####
 class ParserFormView(FormView):
     template_name = 'parser_film.html'
     form_class = forms.ParserForm
