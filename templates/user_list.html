@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Users</title>
+</head>
+<body>
+<h1>Список зарегистрированных пользователей</h1>
+<div>
+    <ol>
+        {% for i in object_list %}
+        <li>
+            <h1>{{i.username}}</h1>
+            <p>{{i.email}}</p>
+            <p>{{i.first_name}}</p>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+</body>
+</html>

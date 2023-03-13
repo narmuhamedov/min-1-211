@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'medblog',
     'tvshow',
     'parser_app',
+    'custom_user',
 
 ]
 
